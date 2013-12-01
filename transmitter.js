@@ -13,11 +13,6 @@ var paths   = {
 function onClickHandler(info, tab) {
   console.log(info);
   var filename = info.linkUrl;
-  if (filename.substring(0,6) != 'magnet') {
-    console.log(filename + " is not a magent torrent link");
-    return;
-  }
-
   submitToTransmission(filename, info.menuItemId);
 };
 

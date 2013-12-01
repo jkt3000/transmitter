@@ -1,6 +1,6 @@
 # Transmitter
 
-A Chrome extension that adds a context menu item that lets you send a magnet torrent link to your remote Transmission server.
+A Chrome extension that adds a context menu item that lets you send a (magnet) torrent link to your remote Transmission server.
 
 
 ## installing
@@ -26,7 +26,7 @@ A Chrome extension that adds a context menu item that lets you send a magnet tor
 
 ## Using
 
-1. Navigate to your favorite site. Right-click on any magnet link, and the you can select to send that link to your remote transmission site and download to your movies or TV path
+1. Navigate to your favorite site. Right-click on any magnet/torrent link, and the you can select to send that link to your remote transmission site and download to your movies or TV path
 
 2. View your transmission server and you should see it downloading. Enjoy!
 
