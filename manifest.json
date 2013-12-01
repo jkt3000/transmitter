@@ -7,7 +7,7 @@
     "http://*/*"
   ],
   "background": {
-    "scripts": ["jquery.js", "sample.js"]
+    "scripts": ["jquery.js", "transmitter.js"]
   },
   "icons" : {
     "16": "icons/Transmission_16.png",
