@@ -1,0 +1,13 @@
+{
+  "name": "Transmitter",
+  "description": "Send magnet torrent links to Transmission",
+  "version": "0.1",
+  "permissions": [
+    "contextMenus",
+    "http://*/*"
+  ],
+  "background": {
+    "scripts": ["jquery.js", "sample.js"]
+  },
+  "manifest_version": 2
+}
