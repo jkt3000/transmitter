@@ -12,6 +12,8 @@ function save_options() {
   localStorage["transmission_port"] = port;
   localStorage["transmission_user"] = user;
   localStorage["transmission_pass"] = pass;
+  localStorage["transmission_movie_path"] = $('#transmission_movie_path').val();
+  localStorage["transmission_tv_path"] = $('#transmission_tv_path').val();
   
   
   $('#status').html("Options saved.");

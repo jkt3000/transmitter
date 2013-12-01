@@ -9,7 +9,7 @@
 
   .container { margin: 20px; padding: 10px; border:1px solid #ddd; background: #f8f8f8; }
 
-  label { display:inline-block; text-align:right; width: 150px; }
+  label { display:inline-block; text-align:right; width: 150px; margin-right:10px; color: #333;}
   input { padding: 5px; height: 30px; width: 300px;}
   </style>
 
@@ -23,24 +23,35 @@
   <h3>Transmission Settings</h3>
   <p>
     <label>Hostname</label>
-    <input id='transmission_host' type='text' placeholder='eg: mysite.dyndns.org' name='transmision_host'>
+    <input class='transmission-setting' id='transmission_host' type='text' placeholder='eg: mysite.dyndns.org' name='transmision_host'>
   </p>
 
   <p>
     <label>Port</label>
-    <input id='transmission_port' type='number' placeholder='9091' name='transmision_port' value='9091'>
+    <input class='transmission-setting' id='transmission_port' type='number' placeholder='9091' name='transmission_port' value='9091'>
   </p>
 
   <p>
     <label>Username</label>
-    <input id='transmission_user' type='text' name='transmision_user'>
+    <input class='transmission-setting' id='transmission_user' type='text' name='transmission_user'>
   </p>
 
   <p>
     <label>Password</label>
-    <input id="transmission_pass" type='password' name='transmision_pass'>
+    <input class='transmission-setting' id="transmission_pass" type='password' name='transmission_pass'>
   </p>
 
+  <h3>Download Paths</h3>
+  <p>Local paths on your <strong>Transmission Server</strong> to download to</p>
+  <p>
+    <label>Movies</label>
+    <input class='transmission-setting' id="transmission_movie_path" type="text" name="transmission_movie_path" placeholder="/local/path/to/download/movies">
+  </p>
+
+  <p>
+    <label>TV</label>
+    <input class='transmission-setting' id="transmission_tv_path" type="text" name="transmission_tv_path" placeholder="/local/path/to/download/tv">
+  </p>
 
   <br>
   <div id="status"></div>

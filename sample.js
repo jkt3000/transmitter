@@ -1,11 +1,11 @@
-// Copyright (c) 2012 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+// Transmitter.js
+
+
 var url = localStorage["transmissionURL"] || "localhost:9091";
 var baseURL = url + "/transmission/rpc";
 var paths   = {
-  'movies': '/Volumes/video/downloads',
-  'tv' : '/Volumes/video/TV'
+  'movies': localStorage["transmission_movie_path"],
+  'tv' : localStorage["transmission_tv_path"]
 };
 
 
