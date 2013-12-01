@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title>Your Transmissions setting</title>
+  <style>
+  body { 
+    font-family: 'Helvetica Neue', 'Arial', sans-serif;
+    margin:0; padding:0;    
+  }
+
+  .container { margin: 20px; padding: 10px; border:1px solid #ddd; background: #f8f8f8; }
+
+  label { display:inline-block; text-align:right; width: 150px; }
+  input { padding: 5px; height: 30px; width: 300px;}
+  </style>
+
+</head>
+
+<body>
+
+<div class='container'>
+  <p id='status'></p>
+
+  <h3>Transmission Settings</h3>
+  <p>
+    <label>Hostname</label>
+    <input id='transmission_host' type='text' placeholder='eg: mysite.dyndns.org' name='transmision_host'>
+  </p>
+
+  <p>
+    <label>Port</label>
+    <input id='transmission_port' type='number' placeholder='9091' name='transmision_port' value='9091'>
+  </p>
+
+  <p>
+    <label>Username</label>
+    <input id='transmission_user' type='text' name='transmision_user'>
+  </p>
+
+  <p>
+    <label>Password</label>
+    <input id="transmission_pass" type='password' name='transmision_pass'>
+  </p>
+
+
+  <br>
+  <div id="status"></div>
+  <button id="save">Save</button>
+</div>
+
+</body>
+<script src="jquery.js"></script>
+<script src="options.js"></script>
+</html>

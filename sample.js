@@ -1,7 +1,8 @@
 // Copyright (c) 2012 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-var baseURL = "http://user:pass@yoursite.com:9091/transmission/rpc";
+var url = localStorage["transmissionURL"] || "localhost:9091";
+var baseURL = url + "/transmission/rpc";
 var paths   = {
   'movies': '/Volumes/video/downloads',
   'tv' : '/Volumes/video/TV'
