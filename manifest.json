@@ -4,6 +4,7 @@
   "version": "0.1",
   "permissions": [
     "contextMenus",
+    "notifications",
     "http://*/*"
   ],
   "background": {
@@ -17,6 +18,11 @@
     "256": "icons/Transmission_256.png",
     "512": "icons/Transmission_512.png"
   },
+  "web_accessible_resources" : [
+    "icons/Transmission_32.png",
+    "icons/Transmission_64.png",
+    "icons/Transmission_128.png"
+  ],
   "options_page": "options.html",
   "manifest_version": 2
 }

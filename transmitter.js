@@ -48,7 +48,25 @@ function sendTorrent(sessionId, filename, download_path) {
     data: JSON.stringify(options),
     headers: headers,
     success: function(data) {
-      console.log(data.result);      
+      console.log(data); 
+      var result, msg;
+      if (data.result == 'success') {
+        result = "Success";
+        msg = "Successfully added torrent: " + data.arguments['torrent-added'].name;
+      } else if (data.result == 'duplicate torrent') {
+        result = "Duplicate";
+        msg = "Torrent called '"+data.arguments['torrent-duplicate'].name + "' already exists.";
+      } else {
+        result = data.result;
+        msg = JSON.stringify(data.arguments);
+      }
+
+      var notify = webkitNotifications.createNotification(
+        "icons/Transmission_64.png",
+        "Send to Transmission: " + result,
+        msg
+      );  
+      notify.show();  
     }
   });
 };
