@@ -31,6 +31,8 @@ function restore_options() {
   $('#transmission_port').val(localStorage["transmission_port"]);
   $('#transmission_user').val(localStorage["transmission_user"]);
   $('#transmission_pass').val(localStorage["transmission_pass"]);
+  $('#transmission_movie_path').val(localStorage["transmission_movie_path"]);
+  $('#transmission_tv_path').val(localStorage["transmission_tv_path"]);
 };
 
 document.addEventListener('DOMContentLoaded', restore_options);
