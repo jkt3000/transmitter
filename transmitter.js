@@ -11,12 +11,12 @@ var paths   = {
 
 // The onClicked callback function.
 function onClickHandler(info, tab) {
-  console.log(info);
   var filename = info.linkUrl;
   submitToTransmission(filename, info.menuItemId);
 };
 
 function submitToTransmission(filename, type) {
+  console.log("Submit to transmission " + filename);
   $.ajax({
     url: baseURL,
     method: 'GET',
@@ -24,6 +24,7 @@ function submitToTransmission(filename, type) {
     error: function(jq, status, err) {
       var sessionId = extractSessionId(jq.responseText);
       var download_path = paths[type] || paths['movies'];
+      console.log("Getting session id " + sessionId);
       sendTorrent(sessionId, filename, download_path);
     }
   });
@@ -39,7 +40,7 @@ function sendTorrent(sessionId, filename, download_path) {
     }
   }
 
-  console.log("Send to transmission " + JSON.stringify(options));
+  console.log("Sending to transmission " + JSON.stringify(options));
 
   $.ajax({
     url: baseURL,
@@ -48,7 +49,7 @@ function sendTorrent(sessionId, filename, download_path) {
     data: JSON.stringify(options),
     headers: headers,
     success: function(data) {
-      console.log(data); 
+      console.log(["Submitted", data]);
       var result, msg;
       if (data.result == 'success') {
         result = "Success";
@@ -66,7 +67,8 @@ function sendTorrent(sessionId, filename, download_path) {
         "Send to Transmission: " + result,
         msg
       );  
-      notify.show();  
+      notify.show();
+      console.log("Created notification");
     }
   });
 };
