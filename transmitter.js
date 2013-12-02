@@ -36,7 +36,7 @@ function sendTorrent(sessionId, filename, download_path) {
     'method' : 'torrent-add',
     'arguments' : {
       'filename' : filename,
-      'torrent-dir' : download_path
+      'download-dir' : download_path
     }
   }
 
