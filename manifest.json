@@ -5,7 +5,8 @@
   "permissions": [
     "contextMenus",
     "notifications",
-    "http://*/*"
+    "http://*/*",
+    "https://*/*"
   ],
   "background": {
     "scripts": ["jquery.js", "transmitter.js"]

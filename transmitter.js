@@ -1,7 +1,7 @@
 // Transmitter.js
 
 
-var url = localStorage["transmissionURL"] || "localhost:9091";
+var url = localStorage["transmissionURL"] || "http://localhost:9091";
 var baseURL = url + "/transmission/rpc";
 var paths   = {
   'movies': localStorage["transmission_movie_path"],
@@ -62,6 +62,7 @@ function sendTorrent(sessionId, filename, download_path) {
         msg = JSON.stringify(data.arguments);
       }
 
+      alert("Added to Transmission: " + result)
       var notify = webkitNotifications.createNotification(
         "icons/Transmission_64.png",
         "Send to Transmission: " + result,
